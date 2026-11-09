@@ -1,0 +1,14 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100">
+  <g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 53 L48 15 L84 53" />
+    <path d="M23 47 V78 H73 V47" />
+    <path d="M35 65 V51 H61 V65" />
+    <path d="M35 65 H61" />
+  </g>
+  <path d="M8 83 Q45 105 88 78" fill="none" stroke="#f5ad21" stroke-width="6" stroke-linecap="round"/>
+  <text x="105" y="54" font-family="Arial,sans-serif" font-size="43" font-weight="bold" fill="#ffffff">Trip</text>
+  <text x="190" y="54" font-family="Arial,sans-serif" font-size="43" font-weight="bold" fill="#f5ad21">Nest</text>
+  <text x="107" y="80" font-family="Arial,sans-serif" font-size="15" fill="#ffffff">Find Your Perfect Stay</text>
+</svg>
+
