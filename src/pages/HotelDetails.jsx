@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -8,7 +7,6 @@ function HotelDetails() {
   const hotel = useSelector((state) =>
     state.hotels.list.find((item) => item.id === Number(id))
   );
-
   if (!hotel) {
     return (
       <div className="empty-state">
@@ -38,23 +36,17 @@ function HotelDetails() {
             alt={hotel.name}
             className="details-image"
           />
-
           <div className="details-content">
             <h1>{hotel.name}</h1>
-
             <p>{hotel.location}</p>
-
             <h2>
               ₹{Number(hotel.price).toLocaleString("en-IN")} / night
             </h2>
-
             <p>{hotel.description}</p>
-
             <div className="coordinates">
               <p><strong>Latitude:</strong> {hotel.latitude}</p>
               <p><strong>Longitude:</strong> {hotel.longitude}</p>
             </div>
-
             <div className="hotel-location">
               <h2>Hotel Location</h2>
               <HotelMap
@@ -62,9 +54,7 @@ function HotelDetails() {
                 longitude={hotel.longitude}
                 hotelName={hotel.name}
               />
-             
             </div> 
-
             <div className="details-actions">
               <Link to="/" className="btn btn-secondary">
                 Back to Hotels

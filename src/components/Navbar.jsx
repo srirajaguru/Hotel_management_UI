@@ -1,11 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setRole } from "../redux/hotelSlice";
 function Navbar() {
   const dispatch = useDispatch();
   const role = useSelector((state) => state.hotels.role);
-
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -16,7 +14,6 @@ function Navbar() {
       <div className="navbar-tagline">
         Perfect for hotel discovery and booking.
       </div>
-
       <div className="navbar-links">
         {role === "admin" && (
           <Link to="/add-hotel" className="btn btn-primary">
@@ -24,7 +21,6 @@ function Navbar() {
           </Link>
         )}
         <label>Role:</label>
-
         <select
           value={role}
           onChange={(e) => dispatch(setRole(e.target.value))}

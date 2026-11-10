@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import initialHotels from "../data/hotels";
-
 const hotelSlice = createSlice({
   name: "hotels",
   initialState: {
@@ -12,11 +11,9 @@ const hotelSlice = createSlice({
     setRole: (state, action) => {
       state.role = action.payload;
     },
-
     setSearchTerm: (state, action) => {
       state.searchTerm = action.payload;
     },
-
     addHotel: (state, action) => {
       state.list.push({
         ...action.payload,
@@ -24,12 +21,10 @@ const hotelSlice = createSlice({
         rating: 0
       });
     },
-
     updateHotel: (state, action) => {
       const index = state.list.findIndex(
         (hotel) => hotel.id === action.payload.id
       );
-
       if (index !== -1) {
         state.list[index] = {
           ...state.list[index],
@@ -37,7 +32,6 @@ const hotelSlice = createSlice({
         };
       }
     },
-
     deleteHotel: (state, action) => {
       state.list = state.list.filter(
         (hotel) => hotel.id !== action.payload
@@ -45,7 +39,6 @@ const hotelSlice = createSlice({
     }
   }
 });
-
 export const {
   setRole,
   setSearchTerm,

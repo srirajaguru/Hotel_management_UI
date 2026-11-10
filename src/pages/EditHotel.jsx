@@ -1,10 +1,8 @@
-
 import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import HotelForm from "../components/HotelForm";
 import { updateHotel } from "../redux/hotelSlice";
-
 function EditHotel() {
   const { id } = useParams();
   const dispatch = useDispatch();
